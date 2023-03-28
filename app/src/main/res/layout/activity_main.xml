@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:layout_insetEdge="none"
+    app:layout_wrapBehaviorInParent="vertical_only"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        tools:text="0" />
+
+    <EditText
+        android:id="@+id/numeroEntrada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <EditText
+        android:id="@+id/numeroSalida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned|numberDecimal" />
+
+    <TableLayout
+        android:id="@+id/tablaOpciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/botonRestar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="restar"
+                android:text="Resta" />
+
+            <Button
+                android:id="@+id/botonSuma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="sumar"
+                android:text="Sumar" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/botonDivision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="dividir"
+                android:text="Division" />
+
+            <Button
+                android:id="@+id/botonMultiplicacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="multiplicar"
+                android:text="Multiplicacion" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
